@@ -63,7 +63,7 @@ func readCertificate(path string) (*x509.Certificate, error) {
 }
 
 func main() {
-	tlsCert, err := tls.LoadX509KeyPair("./root/cert.pem", "./root/key.pem")
+	tlsCert, err := tls.LoadX509KeyPair("./root/ca.crt", "./root/privkey.pem")
 	if err != nil {
 		fmt.Println("error!", err)
 		return
